@@ -1,0 +1,83 @@
+@import '~global.css/mixin';
+
+.container {
+  width: 100%;
+
+  &.active > .item {
+    background: $primary-color-light;
+    border: thin $primary-color-darken solid;
+  }
+
+  > .item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    padding: 0 30px;
+    color: $primary-color-darken;
+    font-weight: bolder;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: transparent;
+    border: thin transparent solid;
+    transition: all 0.2s ease-in-out;
+
+    > .sport-icon {
+      width: 35px;
+      height: 35px;
+    }
+
+    > .name {
+      margin-left: 10px;
+    }
+
+    > .sport-count {
+      display: block;
+      min-width: 40px;
+      margin-left: auto;
+      text-align: right;
+    }
+  }
+
+  &.extend {
+    border-top: thin $primary-color-darken solid;
+    border-bottom: thin $primary-color-darken solid;
+
+    .menu-wrapper {
+      max-height: 2000px;
+    }
+  }
+}
+
+.menu-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+
+  > .menu {
+    width: 100%;
+    height: 100%;
+    padding: 0 30px 10px;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out 300ms;
+
+    &.fade-out {
+      opacity: 1;
+    }
+
+    > .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 50px;
+      padding-left: 10px;
+      color: $primary-color-darken2;
+      font-weight: 600;
+      font-size: 12px;
+      border-bottom: thin $primary-color-darken2 solid;
+    }
+  }
+}

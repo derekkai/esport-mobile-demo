@@ -1,0 +1,51 @@
+@import '~global.css/mixin';
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+
+  .video-icon {
+    width: 15px;
+    height: 15px;
+    background-image: url('../../../images/elements/btn_index_gamelist_box_live.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .more-icon {
+    width: 15px;
+    height: 15px;
+    background-image: url('../../../images/elements/btn_index_gamelist_box_moreodd.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  > .text {
+    @include text-max-line(1);
+
+    margin-left: 10px;
+    color: $primary-color-darken;
+    font-size: 14px;
+  }
+
+  &.disable {
+    pointer-events: none;
+  }
+
+  &.light {
+    > .text {
+      @extend .word-halo; /* stylelint-disable-line */
+    }
+
+    .video-icon {
+      background-image: url('../../../images/elements/btn_index_maingame_live.png');
+    }
+
+    .more-icon {
+      background-image: url('../../../images/elements/btn_index_maingame_moreodd.png');
+    }
+  }
+}

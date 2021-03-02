@@ -1,0 +1,58 @@
+@import '~global.css/mixin';
+
+.container {
+  background: #eeeeee;
+}
+.card-header {
+  color: $primary-color-darken;
+  font-size: 14px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  .market-name {
+    margin-right: auto;
+  }
+}
+
+.card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .market-list {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .market-item {
+      .event-list {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .event-item {
+          height: 50px;
+          width: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-right: thin #dadada solid;
+          padding-left: 10px;
+          .event-name-container {
+            margin-right: 5px;
+            color: $primary-color-darken;
+            font-size: 14px;
+            flex-grow: 1;
+            width: 1px;
+            .event-name {
+              margin-right: 5px;
+              @include text-max-line(1);
+            }
+          }
+          .chip {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}

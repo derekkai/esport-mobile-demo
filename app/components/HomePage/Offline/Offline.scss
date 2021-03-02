@@ -1,0 +1,32 @@
+@import '~global.css/mixin.scss';
+
+.icon {
+  width: 185px;
+  height: 70px;
+  background: url('../../../images/elements/icon_offline.png') center / contain no-repeat;
+  margin: 0 auto 15px;
+}
+
+.text {
+  font-size: 18px;
+  color: $primary-color-darken;
+}
+
+.card-header {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.container {
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 80vw;
+  background: url('../../../images/backgrounds/bg.jpg') center / contain repeat;
+}

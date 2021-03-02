@@ -1,0 +1,52 @@
+@import '~global.css/mixin';
+
+$sizes: ('sm', 'md');
+$states: ('Won', 'Lost', 'CXL', 'Unsettled', 'Returned', 'Draw', 'Live');
+
+$height: (
+  sm: 16px,
+  md: 20px,
+);
+
+$font-size: (
+  sm: 12px,
+  md: 14px,
+);
+
+@function padding($height) {
+  @return ($height / 2);
+}
+
+@each $size in $sizes {
+  .#{$size} {
+    padding: 0 padding(map-get($height, $size));
+
+    > .text {
+      height: map-get($height, $size);
+      font-size: map-get($font-size, $size);
+      line-height: map-get($height, $size);
+    }
+  }
+}
+
+@each $state in $states {
+  .#{$state} {
+    background: map-get($game-status-color, $state);
+    border: thin darken(map-get($game-status-color, $state), 10%) solid;
+  }
+}
+
+.container {
+  display: inline-block;
+  transform: skew(-20deg);
+
+  > .text {
+    @include text-max-line(1);
+
+    display: block;
+    color: $word-color;
+    text-align: center;
+    text-transform: uppercase;
+    transform: skew(20deg);
+  }
+}

@@ -1,0 +1,75 @@
+@import '~global.css/mixin';
+
+.container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: #eee;
+
+  .header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+    background: #000;
+
+    .go-back-btn {
+      width: 14px;
+      height: 20px;
+      margin-right: 15px;
+      background-image: url('../../../images/elements/btn_expendgame_back_arrow_left.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .title {
+      @extend .word-halo; /* stylelint-disable-line */
+
+      font-weight: 500;
+    }
+  }
+
+  .body {
+    flex-grow: 1;
+    width: 100%;
+    height: 1px;
+  }
+}
+
+.navbar {
+  @include shadow(0.3);
+
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding: 5px 20px;
+  background: #fff;
+
+  > .nav {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 1px;
+    height: 100%;
+    color: $disable-color;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px transparent solid;
+    transition: all 0.3s ease-in-out;
+
+    &.active {
+      color: $primary-color-darken;
+      border-bottom-color: $primary-color-darken;
+    }
+  }
+}

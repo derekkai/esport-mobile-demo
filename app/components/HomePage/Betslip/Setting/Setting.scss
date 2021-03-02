@@ -1,0 +1,68 @@
+@import '~global.css/mixin';
+
+.wrapper {
+  @include shadow(0.2);
+
+  position: absolute;
+  top: 50px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out;
+
+  > .container {
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    background: #fff;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+
+  .odds-format-btn {
+    padding: 5px 10px;
+    color: $primary-color-darken;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    &.active {
+      background: $primary-color-light;
+      border: thin $primary-color-darken solid;
+    }
+  }
+
+  .close-btn {
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
+    background-image: url('../../../../images/elements/btn_betlist_close.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.body {
+  margin-top: 16px;
+
+  > .title {
+    color: $primary-color-darken2;
+    font-size: 14px;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+
+    > .label {
+      margin-left: 15px;
+      color: $primary-color-darken;
+      font-size: 14px;
+    }
+  }
+}

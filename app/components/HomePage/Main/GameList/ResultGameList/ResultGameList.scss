@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .empty-icon {
+    position: absolute;
+    margin-top: 20%;
+  }
+
+  .loading {
+    position: absolute;
+    width: 70px;
+    height: 80px;
+    margin-top: 20%;
+  }
+
+  .list {
+    width: 100%;
+  }
+}

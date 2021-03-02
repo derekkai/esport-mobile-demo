@@ -1,0 +1,163 @@
+@import '~global.css/mixin';
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-position: right top;
+  background-size: cover;
+
+  > .header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 10px;
+
+    > .go-back-btn {
+      width: 14px;
+      height: 20px;
+      background-image: url('../../../../images/elements/btn_expendgame_back_arrow_left.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    > .sport-icon {
+      width: 25px;
+      height: 25px;
+      margin: 0 10px;
+    }
+
+    .text {
+      @include text-max-line(1);
+      @extend .word-halo; /* stylelint-disable-line */
+
+      font-size: 14px;
+    }
+
+    > .button {
+      margin-left: auto;
+    }
+
+    > .video-header {
+      display: flex;
+      flex-grow: 1;
+      justify-content: space-around;
+      align-items: center;
+      margin-right: 14px;
+    }
+  }
+
+  > .body {
+    width: 100%;
+
+    > .video {
+      width: 100%;
+      height: 60vw;
+    }
+
+    > .content {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+    }
+  }
+}
+
+.video-header {
+  > .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 55px;
+    text-align: center;
+  }
+
+  > .box {
+    flex-grow: 1;
+    width: 1px;
+    text-align: center;
+  }
+}
+
+.side {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  height: 120px;
+
+  > .icon-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+  }
+
+  &.left {
+    > .icon-bg {
+      padding-right: 8px;
+      background-image: url('../../../../images/elements/img_index_maingame_bg_left.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &.right {
+    > .icon-bg {
+      padding-left: 8px;
+      background-image: url('../../../../images/elements/img_index_maingame_bg_right.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  > .box {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+
+    > .text {
+      @include text-max-line(2);
+
+      color: $word-color;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}
+
+.main {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+
+  > .status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+  }
+
+  > .score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    color: $word-color;
+    font-size: 20px;
+
+    > .divider {
+      margin: 0 8px;
+    }
+  }
+}

@@ -1,0 +1,152 @@
+@import '~global.css/mixin';
+
+.container {
+  user-select: none;
+}
+
+.container:not(.no-arrow) {
+  &.left::before {
+    top: calc(50% - 4px);
+    left: -15px;
+  }
+
+  &.right::before {
+    top: calc(50% - 4px);
+    right: -15px;
+  }
+
+  &.vertical.up::before {
+    top: -10px;
+    left: calc(50% - 5px);
+  }
+
+  &.vertical.down::before {
+    bottom: -10px;
+    left: calc(50% - 5px);
+  }
+
+  &.up::before {
+    border-width: 0 5px 8px;
+    border-color: transparent transparent $price-up-color transparent;
+  }
+
+  &.down::before {
+    border-width: 8px 5px 0;
+    border-color: $price-down-color transparent transparent transparent;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+    transition: border-color 0.3s linear;
+  }
+}
+
+.skin1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 68px;
+  height: 32px;
+  color: $word-color;
+  font-size: 14px;
+  border-image-slice: 12 fill;
+  border-image-width: 9px;
+  border-image-repeat: stretch;
+  transition: all 0.3s ease-in-out;
+
+  &-normal {
+    border-image-source: url('../../../images/elements/img_bg_gamelist_odd.png');
+  }
+
+  &-lock {
+    border-image-source: url('../../../images/elements/img_bg_gamelist_lock.png');
+  }
+
+  &-up {
+    border-image-source: url('../../../images/elements/img_bg_gamelist_odd_up.png');
+  }
+
+  &-down {
+    border-image-source: url('../../../images/elements/img_bg_gamelist_odd_down.png');
+  }
+
+  &-select {
+    border-image-source: url('../../../images/elements/img_bg_gamelist_odd_c.png');
+  }
+}
+
+.skin2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 68px;
+  min-width: 68px;
+  height: 32px;
+  color: $primary-color-darken2;
+  font-weight: bold;
+  font-size: 14px;
+  border-image-slice: 12 fill;
+  border-image-width: 9px;
+  border-image-repeat: stretch;
+  transition: all 0.3s ease-in-out;
+
+  &-up {
+    color: $price-up-color;
+  }
+
+  &-down {
+    color: $price-down-color;
+  }
+
+  &-select {
+    color: $word-color;
+    border-image-source: url('../../../images/elements/img_bg_gamelist_odd.png');
+  }
+}
+
+.skin3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 60px;
+  height: 30px;
+  color: $word-color;
+  font-weight: bold;
+  font-size: 16px;
+  border-image-slice: 9 fill;
+  border-image-width: 6px;
+  border-image-repeat: stretch;
+  transition: all 0.3s ease-in-out;
+
+  &:not(&-select):not(&-lock):hover {
+    border-image-source: url('../../../images/elements/img_bg_maingame_odd_hover.png');
+  }
+
+  &-normal {
+    border-image-source: url('../../../images/elements/img_bg_maingame_odd.png');
+  }
+
+  &-lock {
+    border-image-source: url('../../../images/elements/img_bg_maingame_odd_lock.png');
+  }
+
+  &-up {
+    border-image-source: url('../../../images/elements/img_bg_maingame_odd_up.png');
+  }
+
+  &-down {
+    border-image-source: url('../../../images/elements/img_bg_maingame_odd_down.png');
+  }
+
+  &-select {
+    border-image-source: url('../../../images/elements/img_bg_maingame_odd_choose.png');
+  }
+}

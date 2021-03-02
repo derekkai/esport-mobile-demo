@@ -1,0 +1,19 @@
+@import '~global.css/mixin';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  > img {
+    width: 80px;
+    height: 80px;
+  }
+
+  > .text {
+    margin-top: 20px;
+    color: $primary-color-darken2;
+    font-size: 14px;
+  }
+}

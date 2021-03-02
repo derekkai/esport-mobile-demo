@@ -1,0 +1,26 @@
+@import '~global.css/mixin';
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-left: 10px;
+  color: #3da6f6;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+
+  > .name {
+    @include text-max-line(1);
+
+    margin-right: 5px;
+    margin-left: 22px;
+  }
+
+  > .count {
+    display: block;
+    min-width: 35px;
+    margin-left: auto;
+    text-align: right;
+  }
+}

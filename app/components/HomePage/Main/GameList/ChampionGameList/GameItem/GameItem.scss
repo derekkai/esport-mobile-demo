@@ -1,0 +1,59 @@
+@import '~global.css/mixin';
+
+.container {
+  background: #eee;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+
+  .sport-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
+
+  > .text {
+    color: $primary-color-darken;
+    font-size: 14px;
+  }
+
+  > *:last-child {
+    margin-left: auto;
+  }
+}
+
+.card-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  > .nub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc((100% - 80px) / 4);
+    height: 110px;
+    margin: 10px;
+
+    > .box {
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+      align-items: center;
+      color: $primary-color-darken2;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    > .section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60px;
+    }
+  }
+}

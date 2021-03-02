@@ -1,0 +1,30 @@
+@import '~global.css/mixin';
+
+.container {
+  width: 100%;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+
+  > .side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > .label {
+      margin-right: 5px;
+      color: $disable-color;
+    }
+
+    >.value {
+      color: $primary-color-darken;
+      font-size: 14px;
+    }
+  }
+}
